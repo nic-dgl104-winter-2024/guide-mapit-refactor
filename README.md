@@ -61,7 +61,7 @@ The rest of the app is entirely event-based, so the flow above represents all of
 
 What should we consider here? First, we're stuck with global variables, so we can't do much with those (notice in particular that orange global declaration do not have sockets - so you can't even attach them to any other procedure). Instead, let's look at the composition of the `initData` procedure: What is interesting to me is that much of what `initData` does is not actually data-related. Instead, `initData` initializes _three_ screen components and _one_ actual data structure (the `listLocations` list). Wouldn't it be better, then, to do the following:
 
-![refactored initData](./images/first-four-1.png)
+![refactored initData](./images/first-four-2.png)
 
 ### `initData`
 The modified `initData` concerns itself _only_ with initializing actual data - and not screen components. Notice that `initData` does actually initialize data (i.e. the equivalent of an [assignment statement](https://en.wikipedia.org/wiki/Assignment_(computer_science)) in a more traditional programming language); in contrast to the [declaration](https://en.wikipedia.org/wiki/Declaration_(computer_programming)) of the global variables which occur in the `initialize global...` blocks.
